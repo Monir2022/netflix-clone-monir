@@ -1,11 +1,13 @@
 // NPM Packages
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getDocument } from "scripts/fireStore";
-import {Route, Routes} from "react-router-dom";
+
+
 
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Browser from "components/Browser";
+import "styles/styles.css";
 
 export default function App() {
   // Global state
