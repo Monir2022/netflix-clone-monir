@@ -11,7 +11,6 @@ import { createDocumentWithId } from "scripts/fireStore";
 export default function SignUp() {
   // Global state
   const navigation = useNavigate();
-
   // Local state
   const [form, setForm] = useState({});
   const [errorMassage, setErrorMessage] = useState("");
@@ -31,10 +30,10 @@ export default function SignUp() {
   }
 
   async function onSuccess(uid) {
-    const newUser = { name: form.name, city: form.city, isTeacher: false };
+    const newUser = { name: form.name, isAdmin: false };
     await createDocumentWithId("users", uid, newUser);
     alert("Your account is successfully created, please login now");
-    navigation("/");
+    navigation("/login")
   }
 
   function onFailure(message) {
@@ -51,17 +50,25 @@ export default function SignUp() {
   ));
 
   return (
-    <div id="signup">
+    <div id="signup-page">
       <header>
-        <h3>Register to Netelix</h3>
+        <div className="signup-logo">
+            <img src=" " alt=""/>
+        </div>
+        <div className="signin-link">
+            <Link to="/">Sign In</Link>
+        </div>
       </header>
-      <div className="auth-page-content">
-        <form onSubmit={onSubmit}>
-          {InputFields}
-          <p>{errorMassage}</p>
-          <button>Register</button>
-          <Link to="/">Login instead</Link>
-        </form>
+      <div className="signup-page-content">
+        <div className="signup-form">
+            <h2>Create an account to start using Netelix</h2>
+            <h3>Just this step and you're finished! We hate paperwork, too.</h3>
+            <form onSubmit={onSubmit} className="form">
+              {InputFields}
+              <p>{errorMassage}</p>
+              <button>Sign up</button>
+            </form>
+        </div>
       </div>
     </div>
   );
