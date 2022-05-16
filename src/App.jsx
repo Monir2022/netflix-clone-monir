@@ -1,8 +1,6 @@
 // NPM Packages
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { getDocument } from "scripts/fireStore";
-
-
 
 // Project files
 import { useAuth } from "state/AuthProvider";
@@ -17,19 +15,18 @@ export default function App() {
   const [status, setStatus] = useState(0);
 
   // Methods
-  const fetchUser = (path)=>{
-    const uid = localStorage.getItem("uid");
+  const fetchUser = useCallback(
+    async (path) => {
+      const uid = localStorage.getItem("uid");
       if (uid) {
-        const user = getDocument(path, uid);
+        const user = await getDocument(path, uid);
         setUser(user);
         setIsLogged(true);
       }
       setStatus(1);
-      
-  }
-   
-      
-  
+    },
+    [setUser, setIsLogged]
+  );
   useEffect(() => fetchUser("users"), [fetchUser]);
 
   return (

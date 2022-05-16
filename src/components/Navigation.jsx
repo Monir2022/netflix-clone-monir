@@ -1,13 +1,15 @@
 // NPM Packages
 import { useNavigate } from "react-router";
-
 // Project files
 import { useAuth } from "state/AuthProvider";
+import Logo from "assets/Netelix-logo.png";
 
 export default function Navigation() {
   // Global state
+  const { user } = useAuth();
   const { isLogged, setUser, setIsLogged } = useAuth();
   const navigation = useNavigate();
+
   // Methods
   function onLogout() {
     localStorage.setItem("uid", "");
@@ -19,9 +21,31 @@ export default function Navigation() {
   return (
     <>
       {isLogged && (
-        <nav className="navigation">
-          <button onClick={onLogout}>Logout</button>
-        </nav>
+        <div id="nav">
+          <nav className="navigation">
+            <div className="logo">
+              <img src={Logo} alt="" />
+            </div>
+            {user.isAdmin ? null : (
+              <div className="nav-list">
+                <ul>
+                  <li>
+                    <a href="#banner">Home</a>
+                  </li>
+                  <li>
+                    <a href="#movies-carousel">Movies</a>
+                  </li>
+                  <li>
+                    <a href="#tvshows-carousel">TV Shows</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+            <div className="logout">
+              <button onClick={onLogout}>Sign out</button>
+            </div>
+          </nav>
+        </div>
       )}
     </>
   );

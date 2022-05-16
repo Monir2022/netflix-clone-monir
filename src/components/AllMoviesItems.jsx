@@ -1,9 +1,10 @@
 // NPM Packages
 import { useRef, useState } from "react";
+
 // Project Files
 import VideoItem from "components/VideoItem";
 
-export default function DocumentaryMoviesItems({ videos, onProject }) {
+export default function AllMoviesItems({ videos, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
@@ -26,13 +27,12 @@ export default function DocumentaryMoviesItems({ videos, onProject }) {
   };
 
   // Components
-  const DocumentaryItems = videos
-    .filter((video) => video.genre.toLowerCase().includes("documentary"))
-    .map((item) => (
-      <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
-    ));
+  const AllItems = videos.map((item) => (
+    <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
+  ));
+
   return (
-    <div id="scroll">
+    <div id="movies-carousel">
       <div class="button-contianer">
         <button
           className="left"
@@ -51,10 +51,10 @@ export default function DocumentaryMoviesItems({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>Documentaries</h2>
+        <h2>All movies</h2>
       </div>
       <div className="movies" ref={elementRef}>
-        {DocumentaryItems}
+        {AllItems}
       </div>
     </div>
   );
