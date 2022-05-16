@@ -1,10 +1,10 @@
-//NPM Packages
+// NPM Packages
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
-import {getAuth} from "firebase/auth";
+import { getFirestore } from "firebase/firestore/lite";
+import { getAuth } from "firebase/auth";
 
 
-const firebaseConfig = {
+const firebaseConfiguration = {
   apiKey: "AIzaSyBnlv-KQ51NrYx_9kiSk0tw8SuwmpO4WdU",
   authDomain: "netflix-clone-monir.firebaseapp.com",
   projectId: "netflix-clone-monir",
@@ -14,8 +14,7 @@ const firebaseConfig = {
   measurementId: "G-0B3REWWP18"
 };
 
-
-const firebaseInstance = initializeApp(firebaseConfig);
+const firebaseInstance = initializeApp(firebaseConfiguration);
 
 export const fireStoreInstance = getFirestore(firebaseInstance);
 export const authInstance = getAuth(firebaseInstance);

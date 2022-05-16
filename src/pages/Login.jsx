@@ -1,6 +1,6 @@
 // NPM Packages
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // Project files
 import InputField from "components/InputField";
@@ -13,7 +13,7 @@ import Logo from "assets/Netelix-logo.png";
 export default function Login() {
   // Global state
   const { setUser, setIsLogged } = useAuth();
-  const Navigation = useNavigate();
+  const history = useHistory();
 
   // Local state
   const [form, setForm] = useState({});
@@ -37,7 +37,7 @@ export default function Login() {
     setUser(document);
     setIsLogged(true);
     localStorage.setItem("uid", uid);
-    Navigation("/");
+    history.push("/");
   }
 
   function onFailure(message) {

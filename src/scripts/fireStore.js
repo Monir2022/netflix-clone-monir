@@ -8,6 +8,7 @@ import { fireStoreInstance } from "../scripts/firebase";
 export async function createDocumentWithId(path, id, data) {
   const documentReference = doc(fireStoreInstance, path, id);
   await setDoc(documentReference, data);
+
   return id;
 }
 

@@ -1,5 +1,5 @@
 // NPM Packages
-import { useNavigate } from "react-router";
+import { useHistory } from "react-router";
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Logo from "assets/Netelix-logo.png";
@@ -8,14 +8,14 @@ export default function Navigation() {
   // Global state
   const { user } = useAuth();
   const { isLogged, setUser, setIsLogged } = useAuth();
-  const navigation = useNavigate();
+  const history = useHistory();
 
   // Methods
   function onLogout() {
     localStorage.setItem("uid", "");
     setUser({});
     setIsLogged(false);
-    navigation("/");
+    history.push("/");
   }
 
   return (

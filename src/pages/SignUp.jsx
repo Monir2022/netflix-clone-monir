@@ -1,16 +1,18 @@
 // NPM Packages
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 // Project files
 import InputField from "components/InputField";
 import fields from "data/fields-signup.json";
 import { createAccount } from "scripts/authentification";
 import { createDocumentWithId } from "scripts/fireStore";
+import Logo from "assets/Netelix-logo.png";
 
 export default function SignUp() {
   // Global state
-  const navigation = useNavigate();
+  const history = useHistory();
+
   // Local state
   const [form, setForm] = useState({});
   const [errorMassage, setErrorMessage] = useState("");
@@ -33,7 +35,7 @@ export default function SignUp() {
     const newUser = { name: form.name, isAdmin: false };
     await createDocumentWithId("users", uid, newUser);
     alert("Your account is successfully created, please login now");
-    navigation("/login");
+    history.push("/");
   }
 
   function onFailure(message) {
@@ -53,7 +55,7 @@ export default function SignUp() {
     <div id="signup-page">
       <header>
         <div className="signup-logo">
-          <img src=" " alt="" />
+          <img src={Logo} alt="" />
         </div>
         <div className="signin-link">
           <Link to="/">Sign In</Link>
