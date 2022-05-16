@@ -9,6 +9,7 @@ import Home from "pages/Home";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Movies from "pages/Movies";
 import SignUp from "pages/SignUp";
+import Footer from "./Footer";
 
 
 export default function Browser() {
@@ -23,6 +24,7 @@ export default function Browser() {
           <Route path="/" element={<Home />} />
           <Route path="movies" element={<Movies />} />
         </Route>
+        <Route path="footer" element={<Footer />} />
       </Routes>
     </BrowserRouter>
   );
