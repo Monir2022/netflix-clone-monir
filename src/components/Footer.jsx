@@ -24,35 +24,24 @@ export default function Footer() {
         </div>
         <div className="contact-links">
           <a href="https://www.google.com" target="_blank" rel="noreferrer">
-            Audio and Subtitles
-          </a>
-          <a href="https://www.google.com" target="_blank" rel="noreferrer">
-            Audio Description
+            FAQ
           </a>
           <a href="https://www.google.com" target="_blank" rel="noreferrer">
             Help Center
           </a>
-          <a href="https://www.amazon.com" target="_blank" rel="noreferrer">
-            Gift Cards
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            Terms of Use
           </a>
           <a href="https://www.google.com" target="_blank" rel="noreferrer">
-            Corporate Information
+            Privacy
           </a>
-          <a href="mailto:netelix@info.com" target="_blank" rel="noreferrer">
-            Contact us
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            Cookie Preferences
           </a>
-          <a
-            href="https://www.linkedin.com/jobs/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Jobs
-          </a>
-          <a href="mailto:netelix@media.com" target="_blank" rel="noreferrer">
-            Media Center
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            Corporate information
           </a>
         </div>
-        <small>© 2021 Netelix</small>
       </div>
     </div>
   );
