@@ -45,7 +45,7 @@ export default function RecoverPassword() {
       <p>
         You can click here for going to login page instead
         <div className="recover-password-link">
-          <Link to="/login">Login</Link>
+          <Link to="/">Login</Link>
         </div>
       </p>
     </div>
