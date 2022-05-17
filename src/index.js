@@ -7,11 +7,11 @@ import App from "App";
 import { AuthProvider } from "state/AuthProvider";
 import { StreamingProvider } from "state/StreamingProvider";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <AuthProvider>
     <StreamingProvider>
-      <App />
+      <App/>
     </StreamingProvider>
-  </AuthProvider>,
-  document.getElementById("root")
+  </AuthProvider>
 );
