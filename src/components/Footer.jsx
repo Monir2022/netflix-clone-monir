@@ -10,16 +10,16 @@ export default function Footer() {
       <div className="footer-content">
         <div className="social-links">
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-            <img src={Facebook} alt="letter f in a square" />
+            <img src={Facebook} alt=" " />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <img src={Instagram} alt="a retro camera illustration" />
+            <img src={Instagram} alt=" " />
           </a>
           <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-            <img src={Twitter} alt="a bird shape illustration" />
+            <img src={Twitter} alt=" " />
           </a>
           <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
-            <img src={YouTube} alt="triangle in a square" />
+            <img src={YouTube} alt=" " />
           </a>
         </div>
         <div className="contact-links">

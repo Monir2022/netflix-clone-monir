@@ -8,12 +8,10 @@ import { AuthProvider } from "state/AuthProvider";
 import { StreamingProvider } from "state/StreamingProvider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AuthProvider>
-      <StreamingProvider>
-        <App />
-      </StreamingProvider>
-    </AuthProvider>
-  </React.StrictMode>,
+  <AuthProvider>
+    <StreamingProvider>
+      <App />
+    </StreamingProvider>
+  </AuthProvider>,
   document.getElementById("root")
 );

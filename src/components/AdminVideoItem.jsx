@@ -6,7 +6,7 @@ export default function AdminVideoItem({ item, to, onClick }) {
 
   return (
     <section className="admin-video-item" onClick={onClick}>
-      <img id="admin-video-image" src={imageURL} alt="Video thumbnail" />
+      <img id="admin-video-image" src={imageURL} alt=" " />
       <div>
         <h3>{title}</h3>
       </div>
