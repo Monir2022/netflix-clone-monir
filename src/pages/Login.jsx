@@ -66,6 +66,7 @@ export default function Login() {
             {InputFields}
             <p>{errorMassage}</p>
             <button>Sign In</button>
+            <Link to= "/recover-password">Need help?</Link>
             <small>New to Netflix?</small>
             <Link to="/signup">Sign up now</Link>
           </form>

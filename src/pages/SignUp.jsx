@@ -63,7 +63,7 @@ export default function SignUp() {
       </header>
       <div className="signup-page-content">
         <div className="signup-form">
-          <h2>Create an account to start using Netelix</h2>
+          <h2>Create an account to start using Netflix</h2>
           <h3>Just this step and you're finished! We hate paperwork, too.</h3>
           <form onSubmit={onSubmit} className="form">
             {InputFields}
