@@ -40,13 +40,13 @@ export default function RecoverPassword() {
         </div>
       </header>
       <div className="password-content">
-        <h1>Forgot Email/Password</h1>
-        <p>You can reset your password if you know the email.</p>
-        <p>
-          We will send you an email with instructions on how to reset your
-          password
-        </p>
         <form onSubmit={onRecover}>
+          <h1>Forgot Email/Password</h1>
+          <p>You can reset your password if you know the email.</p>
+          <p>
+            We will send you an email with instructions on how to reset your
+            password
+          </p>
           {InputFields}
           <button>Email me</button>
         </form>

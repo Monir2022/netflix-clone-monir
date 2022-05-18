@@ -2,7 +2,7 @@
 import { useHistory } from "react-router";
 // Project files
 import { useAuth } from "state/AuthProvider";
-import Logo from "assets/Netelix-logo.png";
+import Logo from "assets/logo.png";
 
 export default function Navigation() {
   // Global state
@@ -21,7 +21,7 @@ export default function Navigation() {
   return (
     <>
       {isLogged && (
-        <div id="nav">
+        <div id="nav">          
           <nav className="navigation">
             <div className="logo">
               <img src={Logo} alt="" />

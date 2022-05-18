@@ -47,6 +47,7 @@ export default function UserScreen({ videos, series }) {
     <div id="user-home">
       {homeBackground}
       <div className="home-page-content">
+      <Search search={search} onChange={onChange} />
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
           <AllMoviesItems videos={videos} onProject={onProject} />
@@ -54,7 +55,7 @@ export default function UserScreen({ videos, series }) {
           <DocumentaryMoviesItems videos={videos} onProject={onProject} />
           <TVShowItems series={series} onProject={onProject} />
         </div>
-        <Search search={search} onChange={onChange} />
+        
       </div>
       <Modal state={[modal, setModal]} />
     </div>
