@@ -1,6 +1,6 @@
 // NPM Packages
-import { collection, doc, getDocs } from "firebase/firestore/lite"; // normal methods
-import { addDoc, setDoc, updateDoc, getDoc } from "firebase/firestore/lite"; // async methods
+import { collection, doc, getDocs } from "firebase/firestore/lite"; 
+import { addDoc, setDoc, updateDoc, getDoc } from "firebase/firestore/lite";
 
 // Project files
 import { fireStoreInstance } from "../scripts/firebase";

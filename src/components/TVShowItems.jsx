@@ -31,6 +31,7 @@ export default function TVShowItems({ series, onProject }) {
   ));
 
   return (
+    
     <div id="tvshows-carousel">
       <div class="button-contianer">
         <button

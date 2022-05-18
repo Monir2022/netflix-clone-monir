@@ -8,7 +8,7 @@ import fields from "data/fields-login.json";
 import { signIn } from "scripts/authentification";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
-import Logo from "assets/Netelix-logo.png";
+import Logo from "assets/logo.png";
 
 export default function Login() {
   // Global state

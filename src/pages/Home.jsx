@@ -14,6 +14,7 @@ export default function Home() {
   const { videos } = useStreaming();
   const { dispatch, dispatch2 } = useStreaming();
   const [series, setSeries] = useState([]);
+  console.log(videos)
 
   // Local state
   const path = "videos";

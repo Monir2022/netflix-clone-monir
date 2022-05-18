@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import InputField from "../components/InputField";
 import fields from "../data/fields-recoverPasswordForm.json";
 import { recoverUser } from "../scripts/authentification";
+import Logo from "assets/logo.png";
 
 export default function RecoverPassword() {
   // Local state
@@ -32,22 +33,24 @@ export default function RecoverPassword() {
 
   return (
     <div id="recover-password">
-      <h1>Don´t worry you will help you to get a new password</h1>
-      <p>
-        Please write the email you used to created your account so we can send
-        you an email with instructions on how to reset and create a new
-        password.
-      </p>
-      <form onSubmit={onRecover}>
-        {InputFields}
-        <button>Submit</button>
-      </form>
-      <p>
-        You can click here for going to login page instead
+      <header>
+        <img src={Logo} alt="" />
         <div className="recover-password-link">
-          <Link to="/">Login</Link>
+          <Link to="/">Sign in</Link>
         </div>
-      </p>
+      </header>
+      <div className="password-content">
+        <h1>Forgot Email/Password</h1>
+        <p>You can reset your password if you know the email.</p>
+        <p>
+          We will send you an email with instructions on how to reset your
+          password
+        </p>
+        <form onSubmit={onRecover}>
+          {InputFields}
+          <button>Email me</button>
+        </form>
+      </div>
     </div>
   );
 }
