@@ -46,8 +46,7 @@
 #signin-page .auth-form {
   width: 300px;
   padding: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 #signin-page form small {
@@ -74,4 +73,16 @@
   border-radius: 5px;
   color: white;
   border: 1px solid #393838;
+}
+
+.sign-bottom {
+  margin-top: 4rem;
+}
+
+.need-help {
+  float: right;
+}
+
+#signin-page a:hover {
+  text-decoration: underline;
 }
