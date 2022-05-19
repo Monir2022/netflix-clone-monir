@@ -23,6 +23,7 @@ export default function Navigation() {
   const searchText = (
     <input value={search} onChange={onChange} placeholder="Search" />
   );
+
   return (
     <div>
       {isLogged && (
@@ -31,7 +32,7 @@ export default function Navigation() {
             <div className="logo">
               <img src={Logo} alt="" />
             </div>
-            {user.isAdmin ? null : (
+            {user.isContentManager ? null : (
               <div className="nav-list">
                 <ul>
                   <li>
@@ -39,6 +40,9 @@ export default function Navigation() {
                   </li>
                   <li>
                     <a href="#movies-carousel">Movies</a>
+                  </li>
+                  <li>
+                    <a href="#scroll">Documentaries</a>
                   </li>
                   <li>
                     <a href="#tvshows-carousel">TV Shows</a>

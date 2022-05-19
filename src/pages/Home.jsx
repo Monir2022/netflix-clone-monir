@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <div id="home-page">
-      {user.isAdmin ? (
+      {user.isContentManager ? (
         <AdminScreen videos={videos} />
       ) : (
         <UserScreen videos={videos} series={series} />
