@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 // Project Files
 import VideoItem from "components/VideoItem";
 
-export default function DocumentaryMoviesItems({ videos, onProject }) {
+export default function DocumentaryItems({ videos, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);

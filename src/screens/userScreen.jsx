@@ -5,9 +5,9 @@ import VideoModal from "components/VideoModal";
 import Modal from "components/Modal";
 import Play from "assets/Play.png";
 import AllMoviesItems from "components/AllMoviesItems";
-import RomanticMoviesItems from "components/RomanticMoviesItems";
-import DocumentaryMoviesItems from "components/DocumentaryMoviesItems";
-import TVShowItems from "components/TVShowItems";
+import MoviesItems from "components/MoviesItems";
+import DocumentaryItems from "components/DocumentaryItems";
+import SeriesItems from "components/SeriesItems";
 import { useSearch } from "state/SearchProvider";
 
 export default function UserScreen({ videos, series }) {
@@ -43,9 +43,9 @@ export default function UserScreen({ videos, series }) {
       <div className="home-page-content">
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
-          <RomanticMoviesItems videos={videos} onProject={onProject} />
-          <DocumentaryMoviesItems videos={videos} onProject={onProject} />
-          <TVShowItems series={series} onProject={onProject} />
+          <MoviesItems videos={videos} onProject={onProject} />
+          <DocumentaryItems videos={videos} onProject={onProject} />
+          <SeriesItems series={series} onProject={onProject} />
         </div>
       </div>
       <Modal state={[modal, setModal]} />
