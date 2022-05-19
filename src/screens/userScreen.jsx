@@ -13,20 +13,12 @@ import { useSearch } from "state/SearchProvider";
 export default function UserScreen({ videos, series }) {
   // Local state
   const [modal, setModal] = useState(null);
-  const { setFind, setSearch } = useSearch();
-  const { search, find } = useSearch();
+
+  const { find } = useSearch();
 
   // Methods
   function onProject(item) {
     setModal(<VideoModal video={item} />);
-  }
-
-  function onChange(event) {
-    setSearch(event.target.value);
-    const find = videos.filter((video) => {
-      return video.title.includes(search);
-    });
-    setFind(find);
   }
 
   // Components
@@ -55,8 +47,6 @@ export default function UserScreen({ videos, series }) {
           <DocumentaryMoviesItems videos={videos} onProject={onProject} />
           <TVShowItems series={series} onProject={onProject} />
         </div>
-        <input value={search} onChange={onChange} />
-        <button>Search</button>
       </div>
       <Modal state={[modal, setModal]} />
     </div>
