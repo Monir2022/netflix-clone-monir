@@ -1,7 +1,6 @@
 // NPM package
 import YouTube from "react-youtube";
 import { useState, useEffect, useCallback } from "react";
-import { useParams } from "react-router-dom";
 import { getCollection } from "scripts/fireStore";
 import { useStreaming } from "state/StreamingProvider";
 import SerieItem from "components/SerieItem";

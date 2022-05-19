@@ -8,21 +8,23 @@ import AllMoviesItems from "components/AllMoviesItems";
 import RomanticMoviesItems from "components/RomanticMoviesItems";
 import DocumentaryMoviesItems from "components/DocumentaryMoviesItems";
 import TVShowItems from "components/TVShowItems";
-
+import { useSearch } from "state/SearchProvider";
 
 export default function UserScreen({ videos, series }) {
   // Local state
   const [modal, setModal] = useState(null);
-  const [search, setSearch] = useState("");
-  const [find, setFind] = useState([]);
+  const { setFind, setSearch } = useSearch();
+  const { search, find } = useSearch();
+
   // Methods
   function onProject(item) {
     setModal(<VideoModal video={item} />);
   }
+
   function onChange(event) {
     setSearch(event.target.value);
-    const find = videos.filter((item) => {
-      return item.title.includes(search);
+    const find = videos.filter((video) => {
+      return video.title.includes(search);
     });
     setFind(find);
   }
@@ -47,16 +49,14 @@ export default function UserScreen({ videos, series }) {
     <div id="user-home">
       {homeBackground}
       <div className="home-page-content">
-      <input value={search} onChange= {onChange}/>
-      <button>Search</button>
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
-          <AllMoviesItems videos={videos} onProject={onProject} />
           <RomanticMoviesItems videos={videos} onProject={onProject} />
           <DocumentaryMoviesItems videos={videos} onProject={onProject} />
           <TVShowItems series={series} onProject={onProject} />
         </div>
-        
+        <input value={search} onChange={onChange} />
+        <button>Search</button>
       </div>
       <Modal state={[modal, setModal]} />
     </div>

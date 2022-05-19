@@ -5,7 +5,6 @@ import Home from "pages/Home";
 import Login from "pages/Login";
 import SignUp from "pages/SignUp";
 import EditPage from "pages/EditPage";
-import { SearchProvider } from "state/SearchProvider";
 
 export default function Logged() {
   return (
@@ -14,10 +13,6 @@ export default function Logged() {
       <Route path="/login" component={Login} />
       <Route path="/signup" component={SignUp} />
       <Route component={EditPage} path="/edit/:id" />
-
     </div>
-    
-      
-    
   );
 }

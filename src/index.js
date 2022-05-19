@@ -6,11 +6,14 @@ import ReactDOM from "react-dom";
 import App from "App";
 import { AuthProvider } from "state/AuthProvider";
 import { StreamingProvider } from "state/StreamingProvider";
+import { SearchProvider } from "state/SearchProvider";
 
 ReactDOM.render(
   <AuthProvider>
     <StreamingProvider>
-      <App />
+      <SearchProvider>
+        <App />
+      </SearchProvider>
     </StreamingProvider>
   </AuthProvider>,
   document.getElementById("root")
