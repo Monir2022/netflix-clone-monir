@@ -20,13 +20,11 @@ export default function Navigation() {
     setIsLogged(false);
     history.push("/");
   }
-
   const searchText = (
     <input value={search} onChange={onChange} placeholder="Search" />
   );
-
   return (
-    <>
+    <div>
       {isLogged && (
         <div id="nav">
           <nav className="navigation">
@@ -45,7 +43,7 @@ export default function Navigation() {
                   <li>
                     <a href="#tvshows-carousel">TV Shows</a>
                   </li>
-                  <li>{searchText}</li>
+                  <li className="search">{searchText}</li>
                 </ul>
               </div>
             )}
@@ -55,6 +53,6 @@ export default function Navigation() {
           </nav>
         </div>
       )}
-    </>
+    </div>
   );
 }
