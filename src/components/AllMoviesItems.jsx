@@ -51,7 +51,6 @@ export default function AllMoviesItems({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>All videos</h2>
       </div>
       <div className="movies" ref={elementRef}>
         {AllItems}
