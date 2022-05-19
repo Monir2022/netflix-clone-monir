@@ -3,15 +3,13 @@ import { useHistory } from "react-router";
 // Project files
 import { useAuth } from "state/AuthProvider";
 import Logo from "assets/logo.png";
-import { useSearch } from "state/SearchProvider";
+import Search from "./Search";
 
 export default function Navigation() {
   // Global state
   const { user } = useAuth();
   const { isLogged, setUser, setIsLogged } = useAuth();
   const history = useHistory();
-  const { search } = useSearch();
-  const { onChange } = useSearch();
 
   // Methods
   function onLogout() {
@@ -20,9 +18,6 @@ export default function Navigation() {
     setIsLogged(false);
     history.push("/");
   }
-  const searchText = (
-    <input value={search} onChange={onChange} placeholder="Search" />
-  );
 
   return (
     <div>
@@ -47,7 +42,9 @@ export default function Navigation() {
                   <li>
                     <a href="#tvshows-carousel">TV Shows</a>
                   </li>
-                  <li className="search">{searchText}</li>
+                  <li>
+                    <Search />
+                  </li>
                 </ul>
               </div>
             )}

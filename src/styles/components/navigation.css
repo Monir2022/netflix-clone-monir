@@ -68,14 +68,3 @@
 .logout button:hover {
   text-decoration: underline;
 }
-.nav-list input {
-  background-color: black;
-  border: 1px solid white;
-  width: 180px;
-  height: 25px;
-  color: white;
-}
-.nav-list .search {
-  position: fixed;
-  right: 10%;
-}

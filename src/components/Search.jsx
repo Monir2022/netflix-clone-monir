@@ -1,10 +1,20 @@
-export default function Search() {
+//Project files
+import { useSearch } from "state/SearchProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
+export default function Search() {
+  //Global state
+  const { search } = useSearch();
+  const { onChange, setSearch } = useSearch();
+
+  const icon = <FontAwesomeIcon icon={faMagnifyingGlass} />
 
   return (
     <div id="search">
-      <input value={search} onChange= {onChange}/>
-      <button >delete</button>
+      <div className="icon">{icon}</div>
+      <input value={search} onChange={onChange} placeholder="Search" />
+      <button onClick={() => setSearch(" ")}>X</button>
     </div>
   );
 }

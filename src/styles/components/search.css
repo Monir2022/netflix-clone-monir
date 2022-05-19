@@ -1,0 +1,24 @@
+#search {
+  border: 1px solid white;
+  position: fixed;
+  right: 10%;
+  display: flex;
+  width: 206px;
+  height: 35px;
+}
+
+#search button {
+  margin-left: -2rem;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+}
+#search .icon {
+  padding: 0.5rem;
+  color: white;
+  font-size: 20px;
+}
+
+#search input {
+  background-color: black;
+}
