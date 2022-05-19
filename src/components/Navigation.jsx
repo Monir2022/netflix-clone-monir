@@ -10,8 +10,8 @@ export default function Navigation() {
   const { user } = useAuth();
   const { isLogged, setUser, setIsLogged } = useAuth();
   const history = useHistory();
-  const {search} = useSearch();
-  const {onChange} = useSearch();
+  const { search } = useSearch();
+  const { onChange } = useSearch();
 
   // Methods
   function onLogout() {
@@ -21,10 +21,14 @@ export default function Navigation() {
     history.push("/");
   }
 
+  const searchText = (
+    <input value={search} onChange={onChange} placeholder="Search" />
+  );
+
   return (
     <>
       {isLogged && (
-        <div id="nav">          
+        <div id="nav">
           <nav className="navigation">
             <div className="logo">
               <img src={Logo} alt="" />
@@ -41,10 +45,7 @@ export default function Navigation() {
                   <li>
                     <a href="#tvshows-carousel">TV Shows</a>
                   </li>
-                  <li>
-                    <input value = {search} onChange= {onChange}/>
-                    <button>Search</button>
-                  </li>
+                  <li>{searchText}</li>
                 </ul>
               </div>
             )}
