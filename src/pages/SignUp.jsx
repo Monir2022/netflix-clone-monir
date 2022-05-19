@@ -34,7 +34,7 @@ export default function SignUp() {
   async function onSuccess(uid) {
     const newUser = { name: form.name, isContentManager: false };
     await createDocumentWithId("users", uid, newUser);
-    alert("Your account is successfully created, please login now");
+    alert("Your account is successfully created, please sign-in now");
     history.push("/");
   }
 

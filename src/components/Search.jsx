@@ -1,8 +1,10 @@
-export default function Search({ search, onChange }) {
+export default function Search() {
+
+
   return (
     <div id="search">
       <input value={search} onChange= {onChange}/>
-      <button>Search</button>
+      <button >delete</button>
     </div>
   );
 }
