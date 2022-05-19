@@ -5,7 +5,6 @@
   display: flex;
   width: 206px;
   height: 35px;
-  
 }
 
 #search button {
@@ -18,10 +17,9 @@
   padding: 0.5rem;
   color: white;
   font-size: 20px;
-  
 }
 
 #search input {
   background-color: black;
-  color:white;
+  color: white;
 }

@@ -1,7 +1,6 @@
 .contact-links a {
   text-decoration: none;
-  color: gray;
-  
+  color: gray;  
   flex: 25%;
 }
 
@@ -23,6 +22,7 @@
 #footer {
   width: 60%;
   margin: 0 auto;
+  
 }
 
 .contact-links a:hover {

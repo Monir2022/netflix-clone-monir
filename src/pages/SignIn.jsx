@@ -48,7 +48,7 @@ export default function SignIn() {
   return (
     <div id="signin-page">
       <header>
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="netflix logo" />
       </header>
       <div className="auth-content">
         <div className="auth-form">
@@ -57,11 +57,11 @@ export default function SignIn() {
             {InputFields}
             <p>{errorMassage}</p>
             <button>Sign In</button>
-            <input type="checkbox" />            
+            <input type="checkbox" />
             <small>Remember me</small>
             <Link className="need-help" to="/recover-password">
               <small>Need help?</small>
-            </Link>                         
+            </Link>
             <div className="sign-bottom">
               <small>New to Netflix?</small>
               <Link to="/signup">Sign up now</Link>
