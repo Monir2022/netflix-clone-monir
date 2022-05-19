@@ -63,8 +63,9 @@ export default function SignUp() {
       </header>
       <div className="signup-page-content">
         <div className="signup-form">
-          <h2>Create an account to start using Netflix</h2>
-          <h3>Just this step and you're finished! We hate paperwork, too.</h3>
+          <h2>Create a password to start your membership</h2>
+          <p>Just a few more steps and you're finished!</p> 
+          <h3>We hate paperwork, too.</h3>
           <form onSubmit={onSubmit} className="form">
             {InputFields}
             <p>{errorMassage}</p>

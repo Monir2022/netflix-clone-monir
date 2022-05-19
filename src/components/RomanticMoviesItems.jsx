@@ -51,7 +51,7 @@ export default function RomanticMoviesItems({ videos, onProject }) {
         >
           &#5171;
         </button>
-        <h2>Romantic movies</h2>
+        <h2>Movies</h2>
       </div>
       <div className="movies" ref={elementRef}>
         {RomanceItems}

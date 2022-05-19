@@ -14,7 +14,6 @@ export default function Home() {
   const { videos } = useStreaming();
   const { dispatch, dispatch2 } = useStreaming();
   const [series, setSeries] = useState([]);
-  console.log(videos)
 
   // Local state
   const path = "videos";
@@ -49,7 +48,6 @@ export default function Home() {
       ) : (
         <UserScreen videos={videos} series={series} />
       )}
-      {/*<p>You logged in as {user.name}</p>*/}
     </div>
   );
 }

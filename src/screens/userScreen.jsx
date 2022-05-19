@@ -8,7 +8,7 @@ import AllMoviesItems from "components/AllMoviesItems";
 import RomanticMoviesItems from "components/RomanticMoviesItems";
 import DocumentaryMoviesItems from "components/DocumentaryMoviesItems";
 import TVShowItems from "components/TVShowItems";
-import Search from "components/Search";
+
 
 export default function UserScreen({ videos, series }) {
   // Local state
@@ -29,7 +29,7 @@ export default function UserScreen({ videos, series }) {
 
   // Components
   const homeBackground = videos
-    .filter((item) => item.id === "XQKHhb0q6XRHBi8IRGRN")
+    .filter((item) => item.id === "ED58BZPTP2REGxjSAsz5")
     .map((item) => (
       <header id="banner">
         <div className="hero">
@@ -47,7 +47,8 @@ export default function UserScreen({ videos, series }) {
     <div id="user-home">
       {homeBackground}
       <div className="home-page-content">
-      <Search search={search} onChange={onChange} />
+      <input value={search} onChange= {onChange}/>
+      <button>Search</button>
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
           <AllMoviesItems videos={videos} onProject={onProject} />
