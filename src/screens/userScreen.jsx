@@ -13,9 +13,7 @@ import { useSearch } from "state/SearchProvider";
 export default function UserScreen({ videos, series }) {
   // Local state
   const [modal, setModal] = useState(null);
-
   const { find } = useSearch();
-
   // Methods
   function onProject(item) {
     setModal(<VideoModal video={item} />);

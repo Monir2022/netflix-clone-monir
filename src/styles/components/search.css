@@ -5,21 +5,25 @@
   display: flex;
   width: 206px;
   height: 35px;
+  background-color: black;
 }
 
 #search button {
-  margin-left: -2rem;
+  margin-left: -2.1rem;
   font-size: 18px;
   color: white;
   background-color: black;
+  
 }
 #search .icon {
   padding: 0.5rem;
   color: white;
   font-size: 20px;
+  background-color: black;
 }
 
 #search input {
   background-color: black;
-  color: white;
+  color: white; 
+  
 }
