@@ -2,13 +2,13 @@
   {
     "key": "title",
     "label": "Video title",
-    "placeholder": "Love Hard",
+    "placeholder": "Titanic",
     "type": "text"
   },
   {
     "key": "description",
     "label": "Description of the video",
-    "placeholder": "A romantic Xmas movie",
+    "placeholder": "A romantic movie",
     "type": "text"
   },
   {
@@ -26,13 +26,13 @@
   {
     "key": "genre",
     "label": "Genre(s)",
-    "placeholder": "Comedy, Christmas",
+    "placeholder": "movies",
     "type": "text"
   },
   {
     "key": "cast",
     "label": "Cast",
-    "placeholder": "Lee Zhang, Sardana Alaas",
+    "placeholder": "Alexander, Linda",
     "type": "text"
   },
   {

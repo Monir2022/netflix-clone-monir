@@ -2,21 +2,21 @@
   {
     "key": "name",
     "label": "Name",
-    "placeholder": "Your name",
+    "placeholder": "Sean Poland",
     "type": "text",
     "required": true
   },
   {
     "key": "email",
     "label": "Email",
-    "placeholder": "Email address",
+    "placeholder": "akhandbuet@gmail.com",
     "type": "email",
     "required": true
   },
   {
     "key": "password",
     "label": "Password",
-    "placeholder": "Add a password",
+    "placeholder": "********",
     "type": "password",
     "required": true
   }

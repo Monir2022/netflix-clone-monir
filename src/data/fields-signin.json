@@ -2,13 +2,13 @@
   {
     "key": "email",
     "label": "Email",
-    "placeholder": "Email",
+    "placeholder": "akhandbuet@gmail.com",
     "type": "email",
     "required": true
   },
   {
     "key": "password",
-    "placeholder": "Password",
+    "placeholder": "********",
     "type": "password",
     "required": true
   }
