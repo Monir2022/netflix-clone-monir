@@ -9,6 +9,7 @@ import MoviesItems from "components/MoviesItems";
 import DocumentaryItems from "components/DocumentaryItems";
 import SeriesItems from "components/SeriesItems";
 import { useSearch } from "state/SearchProvider";
+import TopTenInSweden from "components/TopTenInSweden"
 
 export default function UserScreen({ videos, series }) {
   // Local state
@@ -44,6 +45,7 @@ export default function UserScreen({ videos, series }) {
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
           <SeriesItems series={series} onProject={onProject} />
+          <TopTenInSweden videos = {videos} onProject = {onProject}/>
         </div>
       </div>
       <Modal state={[modal, setModal]} />
