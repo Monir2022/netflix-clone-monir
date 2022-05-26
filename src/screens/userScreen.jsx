@@ -7,7 +7,7 @@ import Play from "assets/Play.png";
 import AllMoviesItems from "components/AllMoviesItems";
 import MoviesItems from "components/MoviesItems";
 import DocumentaryItems from "components/DocumentaryItems";
-import SeriesItems from "components/SeriesItems";
+import Series from "components/Series";
 import { useSearch } from "state/SearchProvider";
 import TopTenInSweden from "components/TopTenInSweden"
 
@@ -44,7 +44,7 @@ export default function UserScreen({ videos, series }) {
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
-          <SeriesItems series={series} onProject={onProject} />
+          <Series videos={videos} onProject={onProject} />
           <TopTenInSweden videos = {videos} onProject = {onProject}/>
         </div>
       </div>
