@@ -11,14 +11,13 @@ export default function Search() {
   const { find } = useSearch();
 
   const [message, setMessage] = useState(" ");
-
+   
   const icon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
-  
 
   return (
     <div id="search">
       <div className="icon">{icon}</div>
-      <input value={search} onChange={onChange} placeholder="Search" />
+      <input value={search} onChange={onChange} placeholder="Search" />      
       <button onClick={() => setSearch(" ")}>X</button>
     </div>
   );
