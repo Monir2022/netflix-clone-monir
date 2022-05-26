@@ -40,7 +40,10 @@ export default function Navigation() {
                     <a href="#scroll">Documentaries</a>
                   </li>
                   <li>
-                    <a href="#tvshows-carousel">Series</a>
+                    <a href="#series">Series</a>
+                  </li>
+                  <li>
+                    <a href="#top10">Top 10 in Sweden</a>
                   </li>
                   <li>
                     <Search />

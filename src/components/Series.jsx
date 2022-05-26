@@ -32,7 +32,7 @@ export default function TopTenInSweden({ videos, onProject }) {
       <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
     ));
   return (
-    <div id="scroll">
+    <div id="series">
       <div class="button-contianer">
         <button
           className="left"

@@ -27,7 +27,7 @@ export default function MoviesItems({ videos, onProject }) {
 
   // Components
   const movieItems = videos
-    .filter((video) => video.genre.toLowerCase().includes("romance"))
+    .filter((video) => video.genre.toLowerCase().includes("movies"))
     .map((item) => (
       <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
     ));
