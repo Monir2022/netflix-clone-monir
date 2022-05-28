@@ -33,3 +33,6 @@ p {
   line-height: 22px;
 }
 
+input:focus{
+  outline: none;
+}

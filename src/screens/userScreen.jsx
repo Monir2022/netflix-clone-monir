@@ -9,16 +9,18 @@ import MoviesItems from "components/MoviesItems";
 import DocumentaryItems from "components/DocumentaryItems";
 import Series from "components/Series";
 import { useSearch } from "state/SearchProvider";
-import TopTenInSweden from "components/TopTenInSweden"
+import TopTenInSweden from "components/TopTenInSweden";
+import Found from "components/Found";
 
 export default function UserScreen({ videos, series }) {
   // Local state
   const [modal, setModal] = useState(null);
-  const { find } = useSearch();
+  const { find, search } = useSearch();
   // Methods
   function onProject(item) {
     setModal(<VideoModal video={item} />);
   }
+
 
   // Components
   const homeBackground = videos
@@ -36,12 +38,14 @@ export default function UserScreen({ videos, series }) {
         </div>
       </header>
     ));
+
   return (
     <div id="user-home">
       {homeBackground}
       <div className="home-page-content">
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
+          {search && find.length===0 && <Found/>}
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
           <Series videos={videos} onProject={onProject} />
