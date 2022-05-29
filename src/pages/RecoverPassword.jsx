@@ -34,7 +34,7 @@ export default function RecoverPassword() {
   return (
     <div id="recover-password">
       <header>
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="netflix logo" />
         <div className="recover-password-link">
           <Link to="/">Sign in</Link>
         </div>
