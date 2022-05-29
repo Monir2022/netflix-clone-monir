@@ -6,12 +6,11 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSearch } from "state/SearchProvider";
 
 export default function Search() {
-
   //Global state
   const { search } = useSearch();
   const { onChange, setSearch } = useSearch();
-  
-//Component
+
+  //Component
   const icon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
   return (
