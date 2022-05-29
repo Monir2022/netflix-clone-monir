@@ -1,11 +1,11 @@
 // NPM packages
 import { useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
+import YouTube from "react-youtube";
 // Project files
 import Information from "components/Information";
 import { useStreaming } from "state/StreamingProvider";
 import { createDocument, updateDocument } from "scripts/fireStore";
-import YouTube from "react-youtube";
 
 export default function EditPage() {
   // Global state

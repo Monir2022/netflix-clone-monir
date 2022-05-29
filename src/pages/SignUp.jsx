@@ -12,17 +12,14 @@ import Logo from "assets/logo.png";
 export default function SignUp() {
   // Global state
   const history = useHistory();
-
   // Local state
   const [form, setForm] = useState({});
   const [errorMassage, setErrorMessage] = useState("");
-
   // Methods
   function onChange(key, value) {
     const field = { [key]: value };
     setForm({ ...form, ...field });
   }
-
   async function onSubmit(event) {
     event.preventDefault();
     setErrorMessage("");
@@ -30,14 +27,12 @@ export default function SignUp() {
 
     account.isCreated ? onSuccess(account.payload) : onFailure(account.payload);
   }
-
   async function onSuccess(uid) {
     const newUser = { name: form.name, isContentManager: false };
     await createDocumentWithId("users", uid, newUser);
     alert("Your account is successfully created, please sign-in now");
     history.push("/");
   }
-
   function onFailure(message) {
     setErrorMessage(message);
   }
@@ -50,7 +45,6 @@ export default function SignUp() {
       onChange={onChange}
     />
   ));
-
   return (
     <div id="signup-page">
       <header>
@@ -64,7 +58,7 @@ export default function SignUp() {
       <div className="signup-page-content">
         <div className="signup-form">
           <h2>Create a password to start your membership</h2>
-          <p>Just a few more steps and you're finished!</p> 
+          <p>Just a few more steps and you're finished!</p>
           <h3>We hate paperwork, too.</h3>
           <form onSubmit={onSubmit} className="form">
             {InputFields}

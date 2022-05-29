@@ -1,8 +1,8 @@
 // NPM Packages
 import { useCallback, useEffect } from "react";
-import { getCollection } from "scripts/fireStore";
 
 // Project files
+import { getCollection } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import { useStreaming } from "state/StreamingProvider";
 import AdminScreen from "screens/AdminScreen";

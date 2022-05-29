@@ -1,7 +1,6 @@
 // NPM packages
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 // Project files
 import InputField from "../components/InputField";
 import fields from "../data/fields-recoverPasswordForm.json";
@@ -30,7 +29,6 @@ export default function RecoverPassword() {
       onChange={onChange}
     />
   ));
-
   return (
     <div id="recover-password">
       <header>
