@@ -30,7 +30,7 @@ export default function MoviesItems({ videos, onProject }) {
     ));
   return (
     <div id="scroll">
-      <div class="button-contianer">
+      <div className="button-contianer">
         <button
           className="left"
           onClick={() => {

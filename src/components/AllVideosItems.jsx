@@ -33,7 +33,7 @@ export default function AllMoviesItems({ videos, onProject }) {
 
   return (
     <div id="movies-carousel">
-      <div class="button-contianer">
+      <div className="button-contianer">
         <button
           className="left"
           onClick={() => {
