@@ -72,8 +72,7 @@ export default function SignIn() {
             </small>
           </form>
         </div>
-      </div>
-     
+      </div>     
     </div>
   );
 }
