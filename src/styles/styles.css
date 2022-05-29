@@ -1,6 +1,6 @@
 /***base***/
 @import "base/variables.css";
-@import "base/shared.css";
+@import "base/typography.css";
 
 /***components***/
 @import "components/navigation.css";
