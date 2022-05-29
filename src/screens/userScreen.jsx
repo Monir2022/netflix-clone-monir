@@ -4,7 +4,7 @@ import { useState } from "react";
 import VideoModal from "components/VideoModal";
 import Modal from "components/Modal";
 import Play from "assets/Play.png";
-import AllMoviesItems from "components/AllMoviesItems";
+import AllVideoItems from "components/AllVideosItems";
 import MoviesItems from "components/MoviesItems";
 import DocumentaryItems from "components/DocumentaryItems";
 import Series from "components/Series";
@@ -43,8 +43,8 @@ export default function UserScreen({ videos, series }) {
       {homeBackground}
       <div className="home-page-content">
         <div className="all-categories">
-          {find && <AllMoviesItems videos={find} onProject={onProject} />}
-          {search && find.length === 0 && <NotFound/>}
+          {find && <AllVideoItems videos={find} onProject={onProject} />}
+          {search && find.length === 0 && <NotFound />}
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
           <Series videos={videos} onProject={onProject} />

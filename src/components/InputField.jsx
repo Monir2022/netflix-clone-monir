@@ -3,7 +3,6 @@ import { useRef } from "react";
 
 export default function InputField({ onChange, options, state }) {
   const { key, placeholder, type, required } = options;
-
   // Properties
   const inputReference = useRef(null);
 
