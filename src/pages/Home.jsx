@@ -1,5 +1,5 @@
 // NPM Packages
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { getCollection } from "scripts/fireStore";
 
 // Project files
@@ -12,12 +12,10 @@ export default function Home() {
   // Global state
   const { user } = useAuth();
   const { videos } = useStreaming();
-  const { dispatch, dispatch2 } = useStreaming();
-  const [series, setSeries] = useState([]);
+  const { dispatch } = useStreaming();
 
   // Local state
   const path = "videos";
-  const path2 = "series";
 
   // Methods
   const fetchData = useCallback(
@@ -30,23 +28,10 @@ export default function Home() {
 
   useEffect(() => fetchData(path), [fetchData]);
 
-  const fetchDataSeries = useCallback(
-    async (path2) => {
-      const series = await getCollection(path2);
-      setSeries(series);
-      dispatch2({ type: "SET_DISHES", payload: series });
-    },
-    [dispatch2]
-  );
-
-  useEffect(() => fetchDataSeries(path2), [fetchDataSeries]);
-
   return (
     <div id="home-page">
       {user.isContentManager && <AdminScreen videos={videos} />}
-      {user.isContentManager === false && (
-        <UserScreen videos={videos} series={series} />
-      )}
+      {user.isContentManager === false && <UserScreen videos={videos} />}
     </div>
   );
 }
