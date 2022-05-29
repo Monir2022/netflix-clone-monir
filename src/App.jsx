@@ -19,7 +19,7 @@ export default function App() {
     async (path) => {
       const uid = localStorage.getItem("uid");
       if (uid) {
-        const user = await getDocument(path, uid);        
+        const user = await getDocument(path, uid);
         setUser(user);
         setIsLogged(true);
       }

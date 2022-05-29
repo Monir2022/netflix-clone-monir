@@ -28,9 +28,8 @@ export default function Navigation() {
               <div className="nav-list_admin">
                 <ul className="ul-flex">
                   <li className="logo">
-                    <img src={Logo} alt="" />
+                    <img src={Logo} alt="netflix logo" />
                   </li>
-
                   <li className="logout">
                     <button onClick={onLogout}>Sign out</button>
                   </li>
