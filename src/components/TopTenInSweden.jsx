@@ -29,7 +29,7 @@ export default function TopTenInSweden({ videos, onProject }) {
     .map((item) => (
       <VideoItem key={item.id} item={item} onClick={() => onProject(item)} />
     ));
-    
+
   return (
     <div id="top10">
       <div className="button-contianer">

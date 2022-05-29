@@ -25,7 +25,7 @@ export default function UserScreen({ videos }) {
   const homeBackground = videos
     .filter((item) => item.id === "ED58BZPTP2REGxjSAsz5")
     .map((item) => (
-      <header id="banner">
+      <header key= {Math.random()} id="banner">
         <div className="hero">
           <img src={item.imageURL} alt="Video thumbnail" />
         </div>
