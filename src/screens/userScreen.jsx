@@ -10,7 +10,7 @@ import DocumentaryItems from "components/DocumentaryItems";
 import Series from "components/Series";
 import { useSearch } from "state/SearchProvider";
 import TopTenInSweden from "components/TopTenInSweden";
-import Found from "components/Found";
+import NotFound from "components/NotFound";
 
 export default function UserScreen({ videos, series }) {
   // Local state
@@ -44,7 +44,7 @@ export default function UserScreen({ videos, series }) {
       <div className="home-page-content">
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
-          {search && find.length === 0 && <Found />}
+          {search && find.length === 0 && <NotFound/>}
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
           <Series videos={videos} onProject={onProject} />
