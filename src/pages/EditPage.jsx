@@ -18,7 +18,6 @@ export default function EditPage() {
   function findProfile(videos, id) {
     const existingProfile = videos.find((item) => item.id === id);
     const newProfile = { title: "", description: "", imageURL: "" };
-
     return existingProfile === undefined ? newProfile : existingProfile;
   }
 
@@ -27,10 +26,8 @@ export default function EditPage() {
     alert("Successfully saved!");
     history.push("/");
   }
-
   function onChange(key, value) {
     const field = { [key]: value };
-
     setProfile({ ...profile, ...field });
   }
   async function onCreateProfile(profile) {
