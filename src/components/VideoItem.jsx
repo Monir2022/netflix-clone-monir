@@ -1,4 +1,4 @@
-export default function VideoItem({ item, to, onClick }) {
+export default function VideoItem({ item, onClick }) {
   const { title, imageURL } = item;
 
   return (

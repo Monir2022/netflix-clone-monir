@@ -43,12 +43,10 @@ export default function Home() {
 
   return (
     <div id="home-page">
-      {user.isContentManager ? (
-        <AdminScreen videos={videos} />
-      ) : (
+      {user.isContentManager && <AdminScreen videos={videos} />}
+      {user.isContentManager === false && (
         <UserScreen videos={videos} series={series} />
       )}
-   
     </div>
   );
 }
