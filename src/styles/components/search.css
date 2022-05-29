@@ -14,9 +14,6 @@
   font-size: 18px;
   color: white;
   background-color: black;
-  border-radius: 70px;
-  
-  
 }
 #search .icon {
   padding: 0.5rem;
@@ -27,6 +24,6 @@
 
 #search input {
   background-color: black;
-  color: white; 
-  
+  color: white;
+  border: none;
 }

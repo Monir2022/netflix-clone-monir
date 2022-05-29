@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
     <div id="footer">
-      <div className="contact"><p>Questions? Call 0763393551</p></div>
+      <div className="contact">
+        <p>Questions? Call 0763393551</p>
+      </div>
       <div className="contact-links">
         <a href="https://www.google.com" target="_blank" rel="noreferrer">
           FAQ

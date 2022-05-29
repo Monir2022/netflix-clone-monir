@@ -1,6 +1,6 @@
 // NPM Packages
 import { BrowserRouter } from "react-router-dom";
-import {Switch} from "react-router-dom"
+import { Switch } from "react-router-dom";
 
 // Project files
 import Logged from "routes/Logged";

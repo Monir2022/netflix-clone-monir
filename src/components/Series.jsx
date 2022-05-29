@@ -2,12 +2,10 @@
 import { useRef, useState } from "react";
 // Project Files
 import VideoItem from "components/VideoItem";
-
 export default function TopTenInSweden({ videos, onProject }) {
   // Local State
   const elementRef = useRef(null);
   const [arrowDisable, setArrowDisable] = useState(true);
-
   // Methods
   const handleHorizantalScroll = (element, speed, distance, step) => {
     let scrollAmount = 0;
@@ -24,7 +22,6 @@ export default function TopTenInSweden({ videos, onProject }) {
       }
     }, speed);
   };
-
   // Components
   const movieItems = videos
     .filter((video) => video.genre.toLowerCase().includes("series"))

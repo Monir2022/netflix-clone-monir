@@ -12,7 +12,7 @@ import { useSearch } from "state/SearchProvider";
 import TopTenInSweden from "components/TopTenInSweden";
 import NotFound from "components/NotFound";
 
-export default function UserScreen({ videos, series }) {
+export default function UserScreen({ videos }) {
   // Local state
   const [modal, setModal] = useState(null);
   const { find, search } = useSearch();

@@ -58,4 +58,3 @@ export default function AllMoviesItems({ videos, onProject }) {
     </div>
   );
 }
-

@@ -57,8 +57,8 @@
 }
 .navigation .logout {
   position: fixed;
-  right: 4%;
-  margin-top: -35px;
+  right: 3%;
+  margin-top: -6px;
 }
 
 .navigation .logout button {
@@ -66,7 +66,6 @@
   color: white;
   font-size: 12px;
   border: 1px solid rgba(0, 0, 0, 0);
-  margin-top: 2rem;
 }
 
 .logout button:hover {

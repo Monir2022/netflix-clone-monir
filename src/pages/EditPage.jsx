@@ -1,7 +1,6 @@
 // NPM packages
 import { useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
-
 // Project files
 import Information from "components/Information";
 import { useStreaming } from "state/StreamingProvider";
@@ -13,10 +12,8 @@ export default function EditPage() {
   const { id } = useParams();
   const { videos, dispatch } = useStreaming();
   const history = useHistory();
-
   // Local state
   const [profile, setProfile] = useState(findProfile(videos, id));
-
   // Methods
   function findProfile(videos, id) {
     const existingProfile = videos.find((item) => item.id === id);
@@ -36,17 +33,14 @@ export default function EditPage() {
 
     setProfile({ ...profile, ...field });
   }
-
   async function onCreateProfile(profile) {
     profile.id = await createDocument("videos", profile);
     dispatch({ type: "CREATE_PROFILE", payload: profile });
   }
-
   async function onUpdateProfile(profile) {
     await updateDocument("videos", profile);
     dispatch({ type: "UPDATE_PROFILE", payload: profile });
   }
-
   return (
     <div className="edit-page">
       <div className="edit-content">
