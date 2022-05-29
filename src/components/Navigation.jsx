@@ -24,12 +24,23 @@ export default function Navigation() {
       {isLogged && (
         <div id="nav">
           <nav className="navigation">
-            <div className="logo">
-              <img src={Logo} alt="" />
-            </div>
-            {user.isContentManager ? null : (
+           
+            {user.isContentManager ? (<div className="nav-list_admin">
+                <ul className="ul-flex">
+                  <li className="logo"> 
+                     <img src={Logo} alt="" />
+                  </li>
+  
+                  <li className="logout">
+                   <button  onClick={onLogout}>Sign out</button>
+                  </li>
+                </ul>
+              </div>) : (
               <div className="nav-list">
-                <ul>
+                <ul className="ul-flex">
+                  <li className="logo"> 
+                     <img src={Logo} alt="" />
+                  </li>
                   <li>
                     <a href="#banner">Home</a>
                   </li>
@@ -46,14 +57,15 @@ export default function Navigation() {
                     <a href="#top10">Top 10 in Sweden</a>
                   </li>
                   <li>
-                    <Search />
+                  <Search />
+                  </li>
+                  <li className="logout">
+                   <button  onClick={onLogout}>Sign out</button>
                   </li>
                 </ul>
               </div>
             )}
-            <div className="logout">
-              <button onClick={onLogout}>Sign out</button>
-            </div>
+            
           </nav>
         </div>
       )}

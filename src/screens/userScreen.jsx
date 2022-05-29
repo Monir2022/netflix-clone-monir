@@ -21,7 +21,6 @@ export default function UserScreen({ videos, series }) {
     setModal(<VideoModal video={item} />);
   }
 
-
   // Components
   const homeBackground = videos
     .filter((item) => item.id === "ED58BZPTP2REGxjSAsz5")
@@ -45,11 +44,11 @@ export default function UserScreen({ videos, series }) {
       <div className="home-page-content">
         <div className="all-categories">
           {find && <AllMoviesItems videos={find} onProject={onProject} />}
-          {search && find.length===0 && <Found/>}
+          {search && find.length === 0 && <Found />}
           <MoviesItems videos={videos} onProject={onProject} />
           <DocumentaryItems videos={videos} onProject={onProject} />
           <Series videos={videos} onProject={onProject} />
-          <TopTenInSweden videos = {videos} onProject = {onProject}/>
+          <TopTenInSweden videos={videos} onProject={onProject} />
         </div>
       </div>
       <Modal state={[modal, setModal]} />

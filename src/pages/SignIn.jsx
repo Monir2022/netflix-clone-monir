@@ -8,6 +8,7 @@ import { signIn } from "scripts/authentification";
 import { getDocument } from "scripts/fireStore";
 import { useAuth } from "state/AuthProvider";
 import Logo from "assets/logo.png";
+//import Footer from "components/Footer";
 export default function SignIn() {
   // Global state
   const { setUser, setIsLogged } = useAuth();
@@ -72,6 +73,7 @@ export default function SignIn() {
           </form>
         </div>
       </div>
+     
     </div>
   );
 }

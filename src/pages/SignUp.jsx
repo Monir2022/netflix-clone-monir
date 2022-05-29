@@ -7,7 +7,7 @@ import InputField from "components/InputField";
 import fields from "data/fields-signup.json";
 import { createAccount } from "scripts/authentification";
 import { createDocumentWithId } from "scripts/fireStore";
-import Logo from "assets/Netelix-logo.png";
+import Logo from "assets/logo.png";
 
 export default function SignUp() {
   // Global state
