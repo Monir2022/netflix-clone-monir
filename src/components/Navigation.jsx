@@ -12,11 +12,8 @@ export default function Navigation() {
       {isLogged && (
         <div id="nav">
           <nav className="navigation">
-            {user.isContentManager ? (
-              <NavigationContentManager />
-            ) : (
-              <NavigationUser />
-            )}
+            {user.isContentManager === true && <NavigationContentManager />}
+            {user.isContentManager === false && <NavigationUser />}
           </nav>
         </div>
       )}
